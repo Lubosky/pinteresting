@@ -13,5 +13,48 @@
  *= require_tree .
  *= require_self
  */
+
+/* VARIABLES */
+
+	$white: #fff;
+	$gray-medium-light: #eaeaea;
+	$light-blue: #ecf0f1;
+	$dark-blue: #bdc3c7;	
+	$gray: #555;
+	$dark-gray: #222;
+	$red: #cc2127;
+
+	$body-bg: $light-blue;
+	$navbar-default-link-hover-color: $red;
+	$brand-primary: $red;
+	$jumbotron-bg: $dark-blue;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+/* HEADER */
+
+#logo {
+	font-family: Montserrat;
+	float: left;
+	font-size: 1.7em;
+	color: $red;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+	&:hover {
+		color: $red;
+		text-decoration: none;
+	}
+}
+
+.navbar-nav > li > .dropdown-menu > li:first-child {
+  padding: 3px 20px;
+}
+
+/* FOOTER */
+
+.container .text-muted {
+	margin: 15px 0;
+}
