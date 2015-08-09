@@ -32,8 +32,22 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900,700italic,400italic&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,700italic,400italic&subset=latin,latin-ext);
+
+/* UNIVERSAL */
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
 
 /* HEADER */
 
