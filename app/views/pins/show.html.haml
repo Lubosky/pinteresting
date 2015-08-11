@@ -1,0 +1,15 @@
+.col-md-8.col-md-offset-2
+	.panel.panel-default
+		.panel-heading
+		.panel-body
+			%p.description
+				= @pin.description
+		.panel-footer
+			.row
+				.col-md-6.text-left
+					Submitted by
+					%b
+						= @pin.current_user.name
+				.col-md-6.text-right
+					= link_to "Edit", edit_pin_path
+					= link_to "Delete", pin_path, method: :delete, data: { confirm: "You sure?" }

@@ -1,0 +1,8 @@
+- @pins.each do |pin|
+	.box.panel.panel-default
+		.panel-body
+			= link_to pin.description, pin
+		.panel-footer
+			Submitted by
+			%b
+				= pin.user.name
