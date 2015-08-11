@@ -1,0 +1,9 @@
+%h1
+	= current_user.name
+%p.text-center
+	= link_to "View profile", edit_user_registration_path, class: "btn btn-xs btn-primary"
+	= link_to "View pins", pins_path, class: "btn btn-xs btn-primary"
+%p.text-center
+	= current_user.website
+%p.text-center
+	= current_user.about

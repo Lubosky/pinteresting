@@ -1,5 +1,16 @@
 = form_for @pin, html: { multipart: true } do |f|
+	- if @pin.errors.any?
+		#errors
+			%h3
+				= pluralize(@pin.errors.count, "error")
+				prevented this Pin from being saved!
+			%ul
+				- @pin.errors.full_messages.each do |msg|
+					%li
+						= msg
+
 	.form-group
 		= f.text_area :description, placeholder: "Describe your Pin...", class: "form-control"
 
-	= f.button "Pin", class: "btn btn-primary"
+	= f.button (f.object.new_record? ? "Pin it!" : "Update"), class: "btn btn-primary"
+	= link_to 'Back', 'javascript:history.go(-1);'

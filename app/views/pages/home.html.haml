@@ -1,6 +1,10 @@
 .jumbotron.text-center
 	- if user_signed_in?
-		%h1 Welcome to your account #{current_user.name}.
+		.row
+			= render 'shared/user_info'
+		%hr
+		= pluralize(current_user.pins.count, "Pin")
+
 	- else
 		%h1 Welcome to Pinteresting
 		%p This is the Pinterest clone application created as part of my self-training on Ruby on Rails.
