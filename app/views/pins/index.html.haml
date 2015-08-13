@@ -1,12 +1,11 @@
 #pins.transitions-enabled
 	- @pins.each do |pin|
 		.box.panel.panel-default
-			.panel-heading
-				= link_to (image_tag pin.image.url(:medium)), pin
+			= link_to (image_tag pin.image.url(:medium)), pin
 			.panel-body.text-left
 				= pin.description
 			.panel-footer
-				.row
+				.row.small
 					.col-md-6.text-left
 						Submitted by
 						%b
