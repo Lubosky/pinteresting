@@ -10,7 +10,12 @@
 						= msg
 
 	.form-group
+
 		= f.text_area :description, placeholder: "Describe your Pin...", class: "form-control"
+
+		%p.help-block
+			Upload your Pin by selecting a picture from your hard drive.
+		= f.file_field :image
 
 	= f.button (f.object.new_record? ? "Pin it!" : "Update"), class: "btn btn-primary"
 	= link_to 'Back', 'javascript:history.go(-1);'
