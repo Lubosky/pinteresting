@@ -1,19 +1,18 @@
-- @pins.each do |pin|
-	#pins
-		.col-md-4
-			.box.panel.panel-default
-				.panel-heading
-					= link_to (image_tag pin.image.url(:medium)), pin
-				.panel-body.text-left
-					= pin.description
-				.panel-footer
-					.row
-						.col-md-6.text-left
-							Submitted by
-							%b
-								= pin.user.name
-						.col-md-6.text-right
-							= link_to "Show", pin
-							- if pin.user == current_user
-								= link_to "Edit", edit_pin_path(pin)
-								= link_to "Delete", pin, method: :delete, data: { confirm: "You sure?" }
+#pins.transitions-enabled
+	- @pins.each do |pin|
+		.box.panel.panel-default
+			.panel-heading
+				= link_to (image_tag pin.image.url(:medium)), pin
+			.panel-body.text-left
+				= pin.description
+			.panel-footer
+				.row
+					.col-md-6.text-left
+						Submitted by
+						%b
+							= pin.user.name
+					.col-md-6.text-right
+						= link_to "Show", pin
+						- if pin.user == current_user
+							= link_to "Edit", edit_pin_path(pin)
+							= link_to "Delete", pin, method: :delete, data: { confirm: "You sure?" }
