@@ -3,6 +3,13 @@
 		.panel-body
 			= link_to pin.description, pin
 		.panel-footer
-			Submitted by
-			%b
-				= pin.user.name
+			.row
+				.col-md-6.text-left
+					Submitted by
+					%b
+						= pin.user.name
+				.col-md-6.text-right
+					= link_to "Show", pin
+					- if pin.user == current_user
+						= link_to "Edit", edit_pin_path(pin)
+						= link_to "Delete", pin, method: :delete, data: { confirm: "You sure?" }

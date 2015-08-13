@@ -10,6 +10,7 @@
 					Submitted by
 					%b
 						= @pin.user.name
-				.col-md-6.text-right
-					= link_to "Edit", edit_pin_path
-					= link_to "Delete", pin_path, method: :delete, data: { confirm: "You sure?" }
+				- if @pin.user == current_user
+					.col-md-6.text-right
+						= link_to "Edit", edit_pin_path
+						= link_to "Delete", pin_path, method: :delete, data: { confirm: "You sure?" }
