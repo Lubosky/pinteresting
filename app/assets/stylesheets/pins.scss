@@ -9,8 +9,9 @@
 		margin: 10px;
 		width: 250px;
 		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-		border-radius: 7px;
+		border-radius: 6px;
 		text-align: center;
+		overflow: hidden;
 		img {
 			max-width: 100%;
 			height: auto;
@@ -21,6 +22,7 @@
 #pin_show {
 	.panel-heading {
 		padding: 0;
+		overflow: hidden;
 	}
 	.pin_image {
 		img {
