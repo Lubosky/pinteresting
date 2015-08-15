@@ -1,13 +1,6 @@
 .jumbotron.text-center
-	- if user_signed_in?
-		.row
-			= render 'shared/user_info'
-		%hr
-		= pluralize(current_user.pins.count, "Pin")
-
-	- else
-		%h1 Welcome to Pinteresting
-		%p This is the Pinterest clone application created as part of my self-training on Ruby on Rails.
-		%p Want to know more?
-		= link_to 'Log In', new_user_session_path, class: 'btn btn-lg btn-default'
-		= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-lg btn-primary'
+	%h1 Welcome to Pinteresting
+	%p This is the Pinterest clone application created as part of my self-training on Ruby on Rails.
+	%p Want to know more?
+	= link_to 'Log In', new_user_session_path, class: 'btn btn-lg btn-default'
+	= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-lg btn-primary'

@@ -5,5 +5,5 @@ class Pin < ActiveRecord::Base
 
 	has_attached_file :image, :styles => { :medium => "300x300>" }, :default_url => ActionController::Base.helpers.image_path("ghost-image.png")
 	validates :image, presence: true
-	validates_attachment_content_type :image, :content_type => /\Aimage/
+	validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 end

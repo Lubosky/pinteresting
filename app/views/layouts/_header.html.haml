@@ -9,6 +9,7 @@
 			%ul.nav.navbar-nav.navbar-right
 				%li.dropdown
 					%a.dropdown-toggle{:href => '#', 'role' => 'button', 'data-toggle' => 'dropdown', 'data-target' => '#'} 
+						= image_tag (@user.avatar.url(:thumb)), { :class => "oNavAvatar" }
 						Account
 						%b.caret
 					%ul.dropdown-menu{'role' => 'menu'}
@@ -18,7 +19,7 @@
 								= current_user.name
 						%li.divider
 						%li 
-							= link_to '#' do
+							= link_to profile_path(current_user.id) do
 								%span.glyphicon.glyphicon-user
 								Your Profile
 						%li.divider
