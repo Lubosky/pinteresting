@@ -14,6 +14,7 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'devise', '~> 3.5.1'
 gem 'paperclip', '~> 4.3.0'
 gem 'masonry-rails', '~> 0.2.4'
+gem 'kaminari', '~> 0.16.3'
 
 group :development, :test do
 	gem 'byebug'

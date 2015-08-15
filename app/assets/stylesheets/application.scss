@@ -114,3 +114,20 @@ textarea {
     cursor: inherit;
     display: block;
 }
+
+/* INFINITE SCROLL LOADER */
+#infscr-loading {
+	text-align: center;
+	z-index: 100;
+	position: fixed;
+	left: 45%;
+	bottom: 45%;
+	width: 200px;
+	padding: 10px;
+	background: #fff;
+	opacity: 0.85;
+	color: #333;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}

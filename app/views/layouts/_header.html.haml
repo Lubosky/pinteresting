@@ -9,7 +9,7 @@
 			%ul.nav.navbar-nav.navbar-right
 				%li.dropdown
 					%a.dropdown-toggle{:href => '#', 'role' => 'button', 'data-toggle' => 'dropdown', 'data-target' => '#'} 
-						= image_tag (@user.avatar.url(:thumb)), { :class => "oNavAvatar" }
+						= image_tag (current_user.avatar.url(:thumb)), { :class => "oNavAvatar" }
 						Account
 						%b.caret
 					%ul.dropdown-menu{'role' => 'menu'}
