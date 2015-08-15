@@ -5,7 +5,10 @@
 		- if user_signed_in?
 			%ul.nav.navbar-nav
 				%li
-					= link_to 'New Pin', new_pin_path
+					%p.navbar-btn
+						= link_to new_pin_path, class: "btn btn-sm btn-default" do
+							%span.glyphicon.glyphicon-plus
+							%b New Pin
 			%ul.nav.navbar-nav.navbar-right
 				%li.dropdown
 					%a.dropdown-toggle{:href => '#', 'role' => 'button', 'data-toggle' => 'dropdown', 'data-target' => '#'} 
