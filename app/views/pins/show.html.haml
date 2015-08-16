@@ -19,6 +19,7 @@
 			.panel-footer
 				.row
 					.col-md-6.text-left
+						= image_tag (@pin.user.avatar.url(:thumb)), { :class => "oNavAvatar" }
 						Submitted by
 						%b
 							= @pin.user.name
